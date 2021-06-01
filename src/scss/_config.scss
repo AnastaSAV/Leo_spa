@@ -1,0 +1,117 @@
+$font: "Roboto";
+$fontSize: 16px;
+$color: #333333;
+$pink: #ff817e;
+
+@import "/node_modules/owl-carousel/owl-carousel/owl.carousel.css";
+//@import "/node_modules/owl-carousel/owl-carousel/owl.theme.css";
+
+body {
+	margin: 0;
+	min-width: 320px;
+	font-family: $font;
+   font-size: 26px;
+   color: $color;
+	// overflow-x: hidden;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+::placeholder {
+	color: #666;
+ }
+::selection {
+	background-color: #666;
+	color: #fff;
+ }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+b,
+strong {
+  font-weight: bold;
+}
+ul,ol{
+  margin: 0;
+}
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.container {
+   width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1140px;
+	min-width: 320px;
+}
+.container-fluid{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1530px;
+	min-width: 320px;
+ }
+ .page {
+	 padding: 100px 0 0;
+		
+	&_header {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 860px;
+		text-align: center;
+	}
+	 &_logo {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+	 }
+	 &_suptitle {
+		font-family: $font;
+		font-size: 20px;
+		line-height: 54px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #888888;
+		margin-bottom: 25px;
+	 }
+	 &_title {
+		font-family: Rufina;
+		font-size: 42px;
+		line-height: 55px;
+		font-weight: 700;
+		color: #1e2528;
+		margin-bottom: 38px;
+	 }
+	 &_text {
+		font-family: $font;
+		font-size: 15px;
+		line-height: 28px;
+		font-weight: 300;
+		color: #888888;
+		margin-bottom: 71px;
+	 }
+ }
+ .mb140px {
+	 margin-bottom: 140px;
+ }

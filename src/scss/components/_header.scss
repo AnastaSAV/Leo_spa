@@ -1,0 +1,35 @@
+.header{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	&_wrap{
+	  display: flex;
+	  align-items: flex-end;
+	  padding: 15px 0
+	}
+	&_logo{
+		margin-right: 184px;
+	}
+	&_menu{
+		padding-left: 0;
+		margin: 0;
+		display: flex;
+		justify-items: flex-start;
+	li {
+		color: #263a41;
+		font-family: $font;
+		font-size: 14px;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+	li:not(:first-child) {
+		margin-left: 45px;
+	}
+	&__link:hover {
+		color: $pink;
+		transition: .3s ease-in color;
+	}
+ }
+}

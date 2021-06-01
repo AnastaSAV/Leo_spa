@@ -1,0 +1,139 @@
+.btn-trigger {
+	display: flex;
+	font-family: $font;
+	font-size: 26px;
+	font-weight: 500;
+	padding: 20px 40px;
+	border-radius: 15px;
+	color: $color;
+	background:#1a721a;
+	border:0;
+	cursor: pointer;
+ }
+ .btn-trigger:hover {
+	 border: transparent;
+ }
+ .modal {
+	font-family: $font;
+ }
+ 
+ .modal__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(16, 46, 29, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ }
+ 
+ .modal__container {
+	background-color: #ffffff;
+	padding: 30px;
+	max-width: 500px;
+	border-radius: 15px;
+	box-sizing: border-box;
+ }
+ 
+ .modal__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+ }
+ 
+ .modal__title {
+	margin: 0;
+   font-weight: 500;
+	font-size: 24px;
+	line-height: 1.2;
+	color: #1a721a;
+	box-sizing: border-box;
+ }
+ 
+ .modal__close {
+	background: transparent;
+	border: 0;
+ }
+ 
+ .modal__header .modal__close:before { 
+	 content: "\2715";
+	 color: #1a721a;
+	 font-size: 26px;
+	 font-weight: 500;
+	 }
+	 
+ .modal__content {
+	margin-top: 30px;
+	margin-bottom: 15px;
+	line-height: 1.5;
+	color: $color;
+ }
+ .modal__footer {
+	 display: flex;
+	 justify-content: space-between;
+ }
+ 
+ .modal__btn {
+	flex: 0 0 40%;
+	max-width: 40%;
+	font-size: 16px;
+	padding: 25px 15px;
+	background-color: #e6e6e6;
+	color:#1a721a;
+	border-radius: 15px;
+	cursor: pointer;
+	overflow: visible;
+	line-height: 1.2;
+	margin: 0;
+	will-change: transform;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+   transition: transform .25s ease-out;
+	
+ }
+ 
+ .modal__btn:focus, .modal__btn:hover {
+   transform: scale(1.1);
+	border: 0;
+ }
+ 
+ .modal__btn-primary {
+	flex: 0 0 40%;
+	max-width: 40%;
+	background-color: #1a721a;
+	color: $color;
+	}
+ 
+ 
+ 
+ /**************************\
+	Demo Animation Style
+ \**************************/
+ @keyframes mm-fadeIn {
+	  from { opacity: 0; }
+		 to { opacity: 1; }
+ }
+ 
+ @keyframes mm-slideIn {
+	from { transform: translateX(100%); }
+	  to { transform: translateX(0); }
+ }
+ 
+ .micromodal-slide[aria-hidden="false"] .modal__overlay {
+	animation: mm-fadeIn .4s cubic-bezier(0.40, 1, 0.2, 1);
+ }
+ 
+ .micromodal-slide[aria-hidden="false"] .modal__container {
+	animation: mm-slideIn .4s cubic-bezier(0.40, 1, 0.2, 1);
+ }
+ 
+ .micromodal-slide .modal__container,
+ .micromodal-slide .modal__overlay {
+	will-change: transform;
+ }
+ 
+ .modal[aria-hidden='true'] {
+	display: none;
+ }
