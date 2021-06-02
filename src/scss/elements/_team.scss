@@ -1,0 +1,13 @@
+.team {
+	&_wrap {
+		flex: 0 0 100%;
+		max-width: 100%;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+	&_item {
+		flex: 0 0 cacl(100% / 3);
+		max-width: calc(100% / 3);
+		flex-direction: column;
+	}
+}

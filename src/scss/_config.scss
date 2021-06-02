@@ -115,3 +115,31 @@ img {
  .mb140px {
 	 margin-bottom: 140px;
  }
+//  Slider
+.owl-carousel {
+	width: 100%;
+	max-width: 964px;
+	margin: auto;
+}
+.owl-item {
+	width: 964px;
+}
+ .owl-pagination {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .owl-page {
+	 width: 10px;
+	 height: 10px;
+	 border-radius: 50%;
+	 background-color: #ffc3c2;
+ }
+ .owl-page:not(:nth-child(1)) {
+	 margin-left: 15px;
+ }
+ .active {
+	width: 11px;
+	height: 11px;
+	background-color: #ff817e;
+ }
