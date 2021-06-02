@@ -1,13 +1,83 @@
 .team {
+	padding-top: 139px;
 	&_wrap {
+		display: flex;
 		flex: 0 0 100%;
 		max-width: 100%;
 		flex-direction: row;
 		flex-wrap: nowrap;
+		margin-left: -30px;
 	}
 	&_item {
-		flex: 0 0 cacl(100% / 3);
+		flex: 0 0 calc(100% / 3);
 		max-width: calc(100% / 3);
 		flex-direction: column;
+		position: relative;
 	}
+	&_item:not(:nth-child(3)) {
+		margin-right: 30px;
+	}
+	&_content {
+		width: calc(100% - 60px);
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 7px;
+		margin: auto;
+		z-index: 1;
+		color: #263a41;
+		text-align: center;
+		padding: 30px;
+		transition: .3s linear;
+	}
+	&_item:hover &_content {
+		bottom: -20px;
+		box-shadow: 0 5px 20px #f0f0f0;
+		transition: .3s ease-in;
+	}
+	&_item:hover &_social {
+			opacity: 1;
+			margin-bottom: 0;
+			transition: .6s ease-in-out;
+	}
+	&_title {
+		font-family: 'Rufina';
+		font-size: 22px;
+		font-weight: 700;
+	}
+	&_text {
+		color: #888888;
+		font-family: $font;
+		font-size: 15px;
+		font-weight: 300;
+		line-height: 40px;
+	}
+	&_social {
+		font-size: 0;
+		opacity: 0;
+		margin-bottom: -40px;
+	}
+	&_link {
+		display: inline-block;
+		vertical-align: top;
+		width: 30px;
+		height: 30px;
+		border: 1px solid #30383b;
+		border-radius: 50%;
+	}
+	&_link:not(:nth-child(4)) {
+		margin-right: 13px;
+	}
+	&_link:hover {
+		background-color: $pink;
+		border-color: $pink;
+		color: #fff;
+		transition: .3s ease-in;
+	}
+}
+.fab {
+	display:block;
+	padding: 6px;
+	font-size: 16px;
 }

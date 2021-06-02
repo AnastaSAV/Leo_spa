@@ -581,7 +581,14 @@ img {
   font-weight: 300;
 }
 
+.team {
+  padding-top: 139px;
+}
+
 .team_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
@@ -592,17 +599,105 @@ img {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  margin-left: -30px;
 }
 
 .team_item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 cacl(100%/3);
-          flex: 0 0 cacl(100%/3);
+      -ms-flex: 0 0 calc(100% / 3);
+          flex: 0 0 calc(100% / 3);
   max-width: calc(100% / 3);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+
+.team_item:not(:nth-child(3)) {
+  margin-right: 30px;
+}
+
+.team_content {
+  width: calc(100% - 60px);
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 7px;
+  margin: auto;
+  z-index: 1;
+  color: #263a41;
+  text-align: center;
+  padding: 30px;
+  -webkit-transition: .3s linear;
+  -o-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.team_item:hover .team_content {
+  bottom: -20px;
+  -webkit-box-shadow: 0 5px 20px #f0f0f0;
+          box-shadow: 0 5px 20px #f0f0f0;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+  transition: .3s ease-in;
+}
+
+.team_item:hover .team_social {
+  opacity: 1;
+  margin-bottom: 0;
+  -webkit-transition: .6s ease-in-out;
+  -o-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+.team_title {
+  font-family: 'Rufina';
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.team_text {
+  color: #888888;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 40px;
+}
+
+.team_social {
+  font-size: 0;
+  opacity: 0;
+  margin-bottom: -40px;
+}
+
+.team_link {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #30383b;
+  border-radius: 50%;
+}
+
+.team_link:not(:nth-child(4)) {
+  margin-right: 13px;
+}
+
+.team_link:hover {
+  background-color: #ff817e;
+  border-color: #ff817e;
+  color: #fff;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+  transition: .3s ease-in;
+}
+
+.fab {
+  display: block;
+  padding: 6px;
+  font-size: 16px;
 }
 
 .header {
