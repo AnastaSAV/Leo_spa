@@ -700,6 +700,12 @@ img {
   font-size: 16px;
 }
 
+.appoint {
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .header {
   width: 100%;
   position: fixed;
