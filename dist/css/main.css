@@ -290,7 +290,7 @@ img {
 
 .intro {
   background: url("/img/leaf.png") no-repeat left center;
-  background-size: 17%;
+  background-size: 15%;
   padding-top: 12%;
 }
 
@@ -700,10 +700,12 @@ img {
   font-size: 16px;
 }
 
-.appoint {
-  background-position: left center;
+.appointment {
+  width: 100%;
+  height: auto;
+  background: url("/img/appointment.jpg") left top no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #fff9f8;
 }
 
 .header {
