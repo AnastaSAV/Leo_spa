@@ -1,7 +1,72 @@
-.appointment {
+.appoint {
 	width: 100%;
-	height: auto;
-	background: url('/img/appointment.jpg') left top no-repeat;
-	background-size: cover;
 	background-color: #fff9f8;
+	&_inner {
+		display: flex;
+		flex: 0 0 100%;
+		max-width: 100%;
+		flex-wrap: nowrap;
+	}
+	&_image {
+		display: flex;
+		flex: 0 0 40%;
+		max-width: 40%;
+	}
+	&_form {
+		display: flex;
+		flex: 0 0 60%;
+		max-width: 60%;
+		align-items: center;
+		padding-left: 100px;
+	}
+	.form {
+		display: flex;
+		min-width: 655px;
+		flex-wrap: wrap;
+		&_col {
+			display: flex;
+			flex: 0 0 50%;
+			max-width: 50%;
+			flex-direction: column;
+
+		&:not(:nth-child(2)) {
+				padding-right: 20px;
+		}
+			input, select {
+			margin: 0;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			border-bottom: 1px solid rgba(38, 58, 65, .2);
+			color: #263a41;
+			font-family: $font;
+			font-size: 12px;
+			font-weight: 400;
+			text-transform: uppercase;
+			padding: 20px 0;
+			margin-bottom: 40px;
+		}
+	}
+	 &_row {
+		display: flex;
+		flex: 0 0 100%;
+		max-width: 100%;
+		flex-direction: column;
+		textarea {
+			resize: vertical;
+			overflow: auto;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			border-bottom: 1px solid rgba(38, 58, 65, .2);
+			color: #263a41;
+			font-family: $font;
+			font-size: 12px;
+			font-weight: 400;
+			text-transform: uppercase;
+			margin-bottom: 40px;
+		}
+	}
+		
+	}
 }

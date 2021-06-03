@@ -1,6 +1,9 @@
 .about {
 	position: relative;
-	
+	&_button {
+		max-width: 170px;
+		margin: auto;
+	}
 	&__img1 {
 		position: absolute;
 		top: -3%;

@@ -360,6 +360,11 @@ img {
   position: relative;
 }
 
+.about_button {
+  max-width: 170px;
+  margin: auto;
+}
+
 .about__img1 {
   position: absolute;
   top: -3%;
@@ -621,6 +626,7 @@ img {
 .team_content {
   width: calc(100% - 60px);
   background-color: #fff;
+  border: 1px solid #f1f1f1;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -700,12 +706,117 @@ img {
   font-size: 16px;
 }
 
-.appointment {
+.appoint {
   width: 100%;
-  height: auto;
-  background: url("/img/appointment.jpg") left top no-repeat;
-  background-size: cover;
   background-color: #fff9f8;
+}
+
+.appoint_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.appoint_image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.appoint_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  max-width: 60%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 100px;
+}
+
+.appoint .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 655px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.appoint .form_col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.appoint .form_col:not(:nth-child(2)) {
+  padding-right: 20px;
+}
+
+.appoint .form_col input,
+.appoint .form_col select {
+  margin: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(38, 58, 65, 0.2);
+  color: #263a41;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 20px 0;
+  margin-bottom: 40px;
+}
+
+.appoint .form_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.appoint .form_row textarea {
+  resize: vertical;
+  overflow: auto;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(38, 58, 65, 0.2);
+  color: #263a41;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
 .header {
@@ -782,8 +893,8 @@ img {
 }
 
 .btn__main {
-  max-width: 170px;
-  padding: 20px 47px;
+  min-width: 170px;
+  padding: 20px 25px;
   border-radius: 35px;
   font-family: "Roboto";
   font-size: 13px;
@@ -791,7 +902,7 @@ img {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #ff817e;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .btn__main:hover {
