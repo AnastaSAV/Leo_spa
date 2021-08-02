@@ -63,6 +63,9 @@ img {
 	padding: 0 15px;
 	max-width: 1140px;
 	min-width: 320px;
+	@include mmax(1200) {
+		max-width: 960px;
+	}
 }
 .container-fluid{
 	width: 100%;

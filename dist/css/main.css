@@ -292,12 +292,15 @@ img {
   background: url("/img/leaf.png") no-repeat left center;
   background-size: 15%;
   padding-top: 12%;
+  position: relative;
 }
 
 .intro_banner {
+  max-width: 43%;
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 5;
 }
 
 .intro_inner {
@@ -413,6 +416,7 @@ img {
 
 .about_image {
   height: 570px;
+  position: relative;
 }
 
 .about_item:hover .about_content {
@@ -1200,16 +1204,62 @@ img {
   display: none;
 }
 
-@media all and (max-width: 990px) {
-  .intro_banner {
-    display: none;
+@media all and (max-width: 1800px) {
+  .header_logo {
+    margin-right: 100px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
   }
 
+  .about_items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+
+  .about_item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .about_content {
+    max-width: 476px;
+  }
+
+  .appoint_image {
+    display: none;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .header_wrap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media all and (max-width: 990px) {
   .intro_inner {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }

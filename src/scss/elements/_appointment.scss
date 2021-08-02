@@ -11,6 +11,9 @@
 		display: flex;
 		flex: 0 0 40%;
 		max-width: 40%;
+		@include mmax(1200) {
+			display: none;
+		}
 	}
 	&_form {
 		display: flex;

@@ -7,10 +7,16 @@
 	&_wrap{
 	  display: flex;
 	  align-items: flex-end;
-	  padding: 15px 0
+	  padding: 15px 0;
+	  @include mmax(1100) {
+		  justify-content: space-between;
 	}
+}
 	&_logo{
 		margin-right: 184px;
+		@include mmax(1800) {
+			margin-right: 100px;
+	 }
 	}
 	&_menu{
 		padding-left: 0;

@@ -2,12 +2,15 @@
 	 background: url('/img/leaf.png') no-repeat left center;
 	 background-size: 15%;
     padding-top: 12%;
+	 position: relative;
 	&_banner {
+		max-width: 43%;
 		position: absolute;
 		right: 0;
 		top: 0;
-		@include mmax(990) {
-			display: none;
+		z-index: 5;
+		@include mmax(1615) {
+			// display: none;
 		}
 }
   &_inner {
@@ -20,6 +23,7 @@
 		flex: 0 0 100%;
 		max-width: 100%;
 		text-align: center;
+		align-items: center;
 	}
 }
   &_title {
