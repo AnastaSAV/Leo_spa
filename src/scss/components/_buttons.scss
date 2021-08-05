@@ -28,6 +28,24 @@
 		transition: .3s ease-in;
 	}
 }
+	&__reverse {
+		min-width: 170px;
+		padding: 20px 25px;
+		border-radius: 35px;
+		font-family: $font;
+      font-size: 13px;
+      font-weight: 500;
+		text-transform: uppercase;
+      color: #ffffff;
+		background-color: $color;
+		margin: 0 auto;
+		&:hover {
+			text-decoration: none;
+			background-color:$pink;
+			color: #ffffff;
+			transition: .3s ease-in;
+		}
+	}
 	&__pink {
 		padding: 21px 53px 20px 32px;
 		margin-right: 55px;
