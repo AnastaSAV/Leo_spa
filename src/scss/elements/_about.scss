@@ -9,15 +9,22 @@
 		top: -3%;
 		left: 22%;
 		z-index: 5;
+		@include mmax(600) {
+			display: none;
+		}
 	}
 	&__img2 {
 		position: absolute;
 		top: 8%;
 		right: 7%;
 		z-index: 5;
+		@include mmax(600) {
+			display: none;
+		}
 	}
 		&_inner {
 		display: flex;
+		flex-wrap: wrap;
 		flex: 0 0 100%;
 		max-width: 100%;
 		justify-content: center;
@@ -31,7 +38,6 @@
 		@include mmax(1200) {
 			flex: 0 0 50%;
 			max-width: 50%;
-			margin-bottom: 20px;
 		}
 	}
 	&_image {
@@ -46,6 +52,9 @@
 	}
 	&_item:not(:last-child) { 
 		border-right: 5px solid #ffffff; 
+		@include mmax(1200) {
+		 border-right: none;
+		}
 	}
 	 &_content {
 		 width: 100%;

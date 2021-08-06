@@ -5,6 +5,11 @@
 		max-width: 950px;
 		flex-wrap: wrap;
 		margin: auto;
+		@include mmax(600) {
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	&_item {
 		display: flex;
@@ -12,6 +17,16 @@
 		align-items: flex-start;
 		flex: 0 0 40%;
 		max-width: 40%;
+		@include mmax(992) {
+			align-items: center;
+		}
+		@include mmax(600) {
+			flex: 0 0 90%;
+			max-width: 90%;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
 	}
 	&_itm {
 		display: flex;
@@ -23,6 +38,15 @@
 		max-width: 45%;
 		&:not(:last-child) {
 			margin-bottom: 50px;
+			@include mmax(600) {
+				margin-bottom: 0;
+			}
+		}
+		@include mmax(600) {
+			flex-direction: column;
+			flex: 0 0 30%;
+			max-width: 30%;
+			align-items: center;
 		}
 	}
 	&_link {
@@ -37,6 +61,12 @@
 		align-items: flex-start;
 		flex: 0 0 60%;
 		max-width: 60%;
+		@include mmax(600) {
+			width: 90%;
+			flex: 0 0 90%;
+			max-width: 90%;
+			margin-bottom: 30px;
+		}
 		input, textarea {
 			display: block;
 			width: 100%;
@@ -51,6 +81,14 @@
 		}
 		.btn__main {
 			margin: 0;
+			@include mmax(600) {
+				margin: auto;
+			}
+		}
+	}
+	.footer_text {
+		@include mmax(768) {
+			font-size: 10px;
 		}
 	}
 }

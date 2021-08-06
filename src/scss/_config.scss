@@ -111,6 +111,9 @@ img {
 		font-weight: 300;
 		color: #888888;
 		margin-bottom: 71px;
+		@include mmax(600) {
+			margin-bottom: 30px;
+		}
 	}
 }
 .thin_text {
@@ -127,6 +130,10 @@ img {
 	justify-content: center;
 	flex: 0 0 100%;
 	max-width: 100%;
+	@include mmax(768) {
+		flex-direction: column;
+		align-items: center;
+		}
 	
 	&_item {
 		// flex: 0 0 calc(100% / 3);
@@ -135,6 +142,15 @@ img {
 		max-width: 30%;
 		&:not(:last-child) {
 			margin-right: 29px;
+			@include mmax(768) {
+				margin-right: 0;
+				margin-bottom: 15px;
+			}
+		}
+		@include mmax(768) {
+			flex: 0 0 80%;
+			max-width: 80%;
+			margin-right: 0;
 		}
 	}
 	&_content {
@@ -156,7 +172,13 @@ img {
 		font-weight: 700;
 		color: #263a41;
 		margin-bottom: 30px;
+		@include mmax(920) {
+			font-size: 18px;
+		}
+		@include mmax(860) {
+			margin-bottom: 15px;
 	}
+}
 	&_text {
 		font-family: $font;
 		font-size: 14px;

@@ -3,14 +3,18 @@
 	 background-size: 15%;
     padding-top: 12%;
 	 position: relative;
+	 @include mmax(768) {
+		 background-size: 25%;
+		padding-top: 15%;
+	}
 	&_banner {
 		max-width: 43%;
 		position: absolute;
 		right: 0;
 		top: 0;
 		z-index: 5;
-		@include mmax(1615) {
-			// display: none;
+		@include mmax(992) {
+			display: none;
 		}
 }
   &_inner {
@@ -33,14 +37,21 @@
 	font-weight: 400;
 	text-transform: uppercase;
 	color: #ff817e;
-	padding-bottom: 36px;
+	margin-bottom: 36px;
+		@include mmax(768) {
+	 		margin-bottom: 20px;
+	}
 }
   &_subtitle {
 	font-size: 60px;
 	line-height: 75px;
 	font-weight: 700;
 	color: #1e2528;
-	padding-bottom: 42px;
+	margin-bottom: 42px;
+	@include mmax(768) {
+		font-size: 52px;
+		margin-bottom: 20px;
+	}
 }
   &_text {
 	font-family: $font;

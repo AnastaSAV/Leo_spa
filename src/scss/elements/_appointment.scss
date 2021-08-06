@@ -1,17 +1,26 @@
 .appoint {
-	width: 100%;
 	background-color: #fff9f8;
 	&_inner {
 		display: flex;
 		flex: 0 0 100%;
 		max-width: 100%;
 		flex-wrap: nowrap;
+		@include mmax(992) {
+			flex-direction: column;
+			align-items: center;
+			padding: 50px 0;
+		}
 	}
 	&_image {
 		display: flex;
 		flex: 0 0 40%;
 		max-width: 40%;
-		@include mmax(1200) {
+		@include mmax(992) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-bottom: 15px;
+		}
+		@include mmax(600) {
 			display: none;
 		}
 	}
@@ -21,11 +30,24 @@
 		max-width: 60%;
 		align-items: center;
 		padding-left: 100px;
+		@include mmax(1260) {
+			padding-left: 30px;
+		}
+		@include mmax(992) {
+			padding-left: 0;
+		}
+		@include mmax(600) {
+			flex: 0 0 90%;
+			max-width: 90%;
+		}
 	}
 	.form {
 		display: flex;
 		min-width: 655px;
 		flex-wrap: wrap;
+		@include mmax(1200) {
+			min-width: auto;
+		}
 		&_col {
 			display: flex;
 			flex: 0 0 50%;

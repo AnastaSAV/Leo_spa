@@ -405,7 +405,7 @@ img {
   font-weight: 400;
   text-transform: uppercase;
   color: #ff817e;
-  padding-bottom: 36px;
+  margin-bottom: 36px;
 }
 
 .intro_subtitle {
@@ -413,7 +413,7 @@ img {
   line-height: 75px;
   font-weight: 700;
   color: #1e2528;
-  padding-bottom: 42px;
+  margin-bottom: 42px;
 }
 
 .intro_text {
@@ -466,6 +466,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
@@ -692,7 +694,6 @@ img {
 }
 
 .appoint {
-  width: 100%;
   background-color: #fff9f8;
 }
 
@@ -1410,21 +1411,30 @@ img {
   }
 }
 
+@media all and (max-width: 1260px) {
+  .appoint_form {
+    padding-left: 30px;
+  }
+}
+
 @media all and (max-width: 1200px) {
   .about_item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
-    margin-bottom: 20px;
+  }
+
+  .about_item:not(:last-child) {
+    border-right: none;
   }
 
   .about_content {
     max-width: 476px;
   }
 
-  .appoint_image {
-    display: none;
+  .appoint .form {
+    min-width: auto;
   }
 }
 
@@ -1433,6 +1443,41 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .intro_banner {
+    display: none;
+  }
+
+  .appoint_inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px 0;
+  }
+
+  .appoint_image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .appoint_form {
+    padding-left: 0;
+  }
+
+  .contacts_item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1446,5 +1491,154 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media all and (max-width: 920px) {
+  .wrap_title {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 860px) {
+  .wrap_title {
+    margin-bottom: 15px;
+  }
+
+  .team_content {
+    padding: 10px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .wrap_item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .wrap_item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
+    max-width: 80%;
+    margin-right: 0;
+  }
+
+  .intro {
+    background-size: 25%;
+    padding-top: 15%;
+  }
+
+  .intro_title {
+    margin-bottom: 20px;
+  }
+
+  .intro_subtitle {
+    font-size: 52px;
+    margin-bottom: 20px;
+  }
+
+  .team_item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  .contacts .footer_text {
+    font-size: 10px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .page_text {
+    margin-bottom: 30px;
+  }
+
+  .about__img1 {
+    display: none;
+  }
+
+  .about__img2 {
+    display: none;
+  }
+
+  .appoint_image {
+    display: none;
+  }
+
+  .appoint_form {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+    max-width: 90%;
+  }
+
+  .contacts_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .contacts_item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+    max-width: 90%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .contacts_itm:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .contacts_itm {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+    max-width: 30%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .contacts_form {
+    width: 90%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+    max-width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .contacts_form .btn__main {
+    margin: auto;
   }
 }

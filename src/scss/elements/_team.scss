@@ -3,6 +3,11 @@
 	&_item {
 		flex-direction: column;
 		position: relative;
+		@include mmax(768) {
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
 	}
 	&_content {
 		width: calc(100% - 40px);
@@ -18,6 +23,9 @@
 		text-align: center;
 		padding: 30px;
 		transition: .3s linear;
+		@include mmax(860) {
+			padding: 10px;
+		}
 	}
 	&_item:hover &_content {
 		bottom: -20px;
