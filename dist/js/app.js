@@ -14,6 +14,26 @@ MicroModal.init({
 	debugMode: true, // [10]
  });
 
+ jQuery(document).ready(function($) {
+	console.log($);
+	let header = $("#header");
+	let nav = $("#nav");
+	let navToggle = $("#navToggle");
+	let scrollPos = $(window).scrollTop();
+	// fixed header
+	$(window).on("scroll load resize", function() {
+			scrollPos = $(this).scrollTop();
+		if (scrollPos > 400) {
+			header.addClass("fixed");
+		} else {
+			header.removeClass("fixed");
+		}
+	});
+		 // Nav
+		 navToggle.on("click", function(event) {
+			event.preventDefault();
+			nav.toggleClass("show");
+	  });
  $(document).ready(function(){
 	$("#slider").owlCarousel({
 		items: 1,
@@ -23,3 +43,4 @@ MicroModal.init({
  })
 
 });
+})

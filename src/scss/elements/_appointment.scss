@@ -10,6 +10,9 @@
 			align-items: center;
 			padding: 50px 0;
 		}
+		@include mmax(768) {
+			padding: 0 0 50px;
+		}
 	}
 	&_image {
 		display: flex;

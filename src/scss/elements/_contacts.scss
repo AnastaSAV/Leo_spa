@@ -90,5 +90,8 @@
 		@include mmax(768) {
 			font-size: 10px;
 		}
+		@include mmax(480) {
+			display: none;
+	  }
 	}
 }

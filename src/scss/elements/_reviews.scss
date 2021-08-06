@@ -1,6 +1,9 @@
 .reviews {
 	padding: 137px 0;
 	background-color: #fff9f8;
+	@include mmax(992) {
+		padding: 60px 0;
+	}
 &_content {
 	display: flex;
 	flex-direction: column;

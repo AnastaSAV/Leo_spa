@@ -1,5 +1,8 @@
 .team {
 	padding-top: 139px;
+	@include mmax(992) {
+		padding-top: 60px;
+	}
 	&_item {
 		flex-direction: column;
 		position: relative;

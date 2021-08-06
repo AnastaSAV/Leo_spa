@@ -190,6 +190,9 @@ img {
 }
 .mb140px {
 	margin-bottom: 140px;
+	@include mmax(768) {
+		margin-bottom: 80px;
+	}
 }
 //  Slider
 .owl-carousel {

@@ -7,6 +7,10 @@
 		 background-size: 25%;
 		padding-top: 15%;
 	}
+	@include mmax(576) {
+		background-size: 35%;
+	   padding-top: 25%;
+  }
 	&_banner {
 		max-width: 43%;
 		position: absolute;
@@ -66,5 +70,10 @@
 	  flex-wrap: wrap;
 	  align-items: center;
 	  justify-content: flex-start;
+	  @include mmax(480) {
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: center;
+	  }
 }
 }
