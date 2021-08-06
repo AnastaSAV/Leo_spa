@@ -20,22 +20,12 @@
 		display: flex;
 		flex: 0 0 100%;
 		max-width: 100%;
+		justify-content: center;
+		align-items: center;
    }
-	&_items {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		@include mmax(1200) {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-evenly;
-		}
-	}
 	&_item {
 			flex: 0 0 25%;
 			max-width: 25%;
-			height: 570px;
-			overflow: hidden;
 			position: relative;
 			
 		@include mmax(1200) {
@@ -45,7 +35,7 @@
 		}
 	}
 	&_image {
-		height: 570px;
+		width: 100%;
 		position: relative;
 	@include mmax(1200) {
 		

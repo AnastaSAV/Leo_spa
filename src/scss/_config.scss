@@ -6,8 +6,9 @@ $pink: #ff817e;
 @import "/node_modules/owl-carousel/owl-carousel/owl.carousel.css";
 //@import "/node_modules/owl-carousel/owl-carousel/owl.theme.css";
 
-body {
+html, body {
 	margin: 0;
+	box-sizing: border-box;
 	min-width: 320px;
 	font-family: $font;
 	font-size: 26px;
@@ -61,11 +62,8 @@ img {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
-	max-width: 1140px;
+	max-width: 1170px;
 	min-width: 320px;
-	@include mmax(1200) {
-		max-width: 960px;
-	}
 }
 .container-fluid{
 	width: 100%;
@@ -125,15 +123,19 @@ img {
 }
 .wrap {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: center;
 	flex: 0 0 100%;
 	max-width: 100%;
 	
 	&_item {
-		flex: 0 0 calc(100% / 3);
-		max-width: calc(100% / 3);
-		padding-right: 29px;
+		// flex: 0 0 calc(100% / 3);
+		// max-width: calc(100% / 3);
+		flex: 0 0 30%;
+		max-width: 30%;
+		&:not(:last-child) {
+			margin-right: 29px;
+		}
 	}
 	&_content {
 		display: flex;
@@ -142,6 +144,10 @@ img {
 		text-align: center;
 		border: 1px #999 solid;
 		padding: 20px 20px 50px;
+		&:hover {
+			box-shadow: 15px 20px 40px rgba(4, 10, 50, 0.1);
+			transition: .3s ease-in;
+		}
 	}
 	&_title {
 		font-family: Rufina;
